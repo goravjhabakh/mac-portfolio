@@ -54,7 +54,7 @@ const Dock = () => {
   }, [])
 
   const toggleApp = ({ id, canOpen }: { id: string, canOpen: boolean }) => {
-
+    console.log({ id, canOpen })
   }
 
   return (
