@@ -3,16 +3,18 @@ import { dockApps } from "../constants"
 import { Tooltip } from "react-tooltip"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
+import useWindowStore from "../store"
 
 const Dock = () => {
   const dockRef = useRef<HTMLDivElement>(null)
+  const { windows, openWindow, closeWindow } = useWindowStore.getState()
 
   useGSAP(() => {
     const dock = dockRef.current
     if (!dock) return
 
     const icons = dock.querySelectorAll('.dock-icon')
-    
+
     const animateIcons = (mouseX: number) => {
       const { left } = dock.getBoundingClientRect()
       icons.forEach((icon) => {
@@ -54,7 +56,15 @@ const Dock = () => {
   }, [])
 
   const toggleApp = ({ id, canOpen }: { id: string, canOpen: boolean }) => {
-    console.log({ id, canOpen })
+    if (!canOpen) return
+
+    if (windows[id].isOpen) {
+      closeWindow(id)
+    } else {
+      openWindow(id)
+    }
+
+    console.log(useWindowStore.getState().windows)
   }
 
   return (
@@ -62,14 +72,14 @@ const Dock = () => {
       <div ref={dockRef} className="dock-container">
         {dockApps.map(({ id, name, img, canOpen }) => (
           <div key={id} className="relative flex justify-center">
-            <button type="button" className="dock-icon" aria-label={name} data-tooltip-id="dock-tooltip" 
+            <button type="button" className="dock-icon" aria-label={name} data-tooltip-id="dock-tooltip"
               data-tooltip-content={name} data-tooltip-delay-show={150} disabled={!canOpen} onClick={() => toggleApp({ id, canOpen })}>
-              <img src={img} alt={name} loading="lazy" className={canOpen ? "" : "opacity-50"}/>  
+              <img src={img} alt={name} loading="lazy" className={canOpen ? "" : "opacity-50"} />
             </button>
           </div>
         ))}
 
-        <Tooltip id="dock-tooltip" place="top" className="tooltip "/>
+        <Tooltip id="dock-tooltip" place="top" className="tooltip " />
       </div>
     </section>
   )

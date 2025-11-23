@@ -14,15 +14,15 @@ const navIcons = [
 const dockApps = [
   {
     id: 'finder',
-    name: 'Resume',
+    name: 'Projects',
     img: '/images/finder.png',
     canOpen: true
   },
   {
     id: 'safari',
-    name: 'Portfolio',
+    name: 'Articles',
     img: '/images/safari.png',
-    canOpen: true
+    canOpen: false
   },
   {
     id: 'photos',
@@ -31,7 +31,7 @@ const dockApps = [
     canOpen: false
   },
   {
-    id: 'contacts',
+    id: 'contact',
     name: 'Contact',
     img: '/images/contact.png',
     canOpen: true
@@ -40,7 +40,7 @@ const dockApps = [
     id: 'terminal',
     name: 'Skills',
     img: '/images/terminal.png',
-    canOpen: false
+    canOpen: true
   },
   {
     id: 'trash',
@@ -50,4 +50,16 @@ const dockApps = [
   }
 ]
 
-export { navLinks, navIcons, dockApps }
+const initialZIndex = 1000
+
+const windowConfig = {
+  finder: { isOpen: false, zIndex: initialZIndex, data: null },
+  contact: { isOpen: false, zIndex: initialZIndex, data: null },
+  safari: { isOpen: false, zIndex: initialZIndex, data: null },
+  resume: { isOpen: false, zIndex: initialZIndex, data: null },
+  txtfile: { isOpen: false, zIndex: initialZIndex, data: null },
+  imgfile: { isOpen: false, zIndex: initialZIndex, data: null },
+  terminal: { isOpen: false, zIndex: initialZIndex, data: null }
+}
+
+export { navLinks, navIcons, dockApps, initialZIndex, windowConfig }
