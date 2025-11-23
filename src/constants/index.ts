@@ -1,7 +1,7 @@
 const navLinks = [
-  { id: 1, name: 'Resume' },
-  { id: 2, name: 'Contact' },
-  { id: 3, name: 'Projects' },
+  { id: 1, name: 'Portfolio', type: 'finder' },
+  { id: 2, name: 'Contact', type: 'contact' },
+  { id: 3, name: 'Resume', type: 'resume' },
 ]
 
 const navIcons = [
@@ -14,7 +14,7 @@ const navIcons = [
 const dockApps = [
   {
     id: 'finder',
-    name: 'Projects',
+    name: 'Portfolio',
     img: '/images/finder.png',
     canOpen: true
   },

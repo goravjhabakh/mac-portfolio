@@ -3,7 +3,7 @@ import { dockApps } from "../constants"
 import { Tooltip } from "react-tooltip"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
-import useWindowStore from "../store"
+import useWindowStore from "../store/window"
 
 const Dock = () => {
   const dockRef = useRef<HTMLDivElement>(null)

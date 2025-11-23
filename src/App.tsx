@@ -4,6 +4,7 @@ import Welcome from "./components/Welcome"
 import gsap from "gsap"
 import Draggable from "gsap/Draggable"
 import Terminal from "./windows/Terminal"
+import Resume from "./windows/Resume"
 
 gsap.registerPlugin(Draggable)
 
@@ -15,6 +16,7 @@ const App = () => {
       <Dock />
 
       <Terminal />
+      <Resume />
     </main>
   )
 }

@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react"
-import useWindowStore from "../store"
+import useWindowStore from "../store/window"
 import type { JSX } from "react/jsx-runtime"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
