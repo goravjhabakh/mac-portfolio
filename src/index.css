@@ -163,47 +163,36 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-2xl absolute top-32 left-1/12 bg-white/95 backdrop-blur-xl shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden border border-gray-200/50;
 
-    h2 {
-      @apply font-bold text-sm text-center w-full;
+    #window-header {
+      @apply relative bg-gray-100/80 backdrop-blur-md border-b border-gray-200;
+
+      h2 {
+        @apply font-medium text-xs text-gray-500 text-center w-full absolute left-0 top-1/2 -translate-y-1/2 pointer-events-none;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      }
     }
 
     .techstack {
-      @apply text-sm font-roboto p-5;
+      @apply text-[13px] font-roboto p-3 h-[400px] overflow-y-auto text-[#333] leading-snug;
+      font-family: "SF Mono", "Monaco", "Menlo", "Courier New", monospace;
 
-      .label {
-        @apply flex items-center ms-10 mt-7;
+      /* Custom scrollbar for terminal */
+      &::-webkit-scrollbar {
+        width: 8px;
       }
-
-      .content {
-        @apply py-5 my-5 border-y border-dashed space-y-1;
-
-        li {
-          .check {
-            @apply text-[#00A154] w-5;
-          }
-
-          h3 {
-            @apply font-semibold text-[#00A154] w-32 ms-5;
-          }
-
-          ul {
-            @apply flex items-center gap-3;
-          }
-        }
+      &::-webkit-scrollbar-track {
+        background: transparent;
       }
-
-      .footnote {
-        @apply text-[#00A154] space-y-1;
-
-        p {
-          @apply flex items-center;
-
-          svg {
-            @apply w-5 me-5;
-          }
-        }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.4);
       }
     }
   }

@@ -62,4 +62,23 @@ const windowConfig = {
   terminal: { isOpen: false, zIndex: initialZIndex, data: null }
 }
 
-export { navLinks, navIcons, dockApps, initialZIndex, windowConfig }
+const skills = [
+  {
+    category: 'Languages',
+    items: ['Python', 'C++', 'Java', 'JavaScript', 'TypeScript']
+  },
+  {
+    category: 'Frameworks',
+    items: ['React', 'Next.js', 'Node.js', 'Express.js', 'TailwindCSS']
+  },
+  {
+    category: 'Cloud and DB',
+    items: ['AWS', 'Firebase', 'MongoDB', 'PostgreSQL', 'MySQL']
+  },
+  {
+    category: 'ML, Tools and Soft Skills',
+    items: ['Pytorch', 'TensorFlow', 'Git', 'Teamwork', 'Communication']
+  }
+]
+
+export { navLinks, navIcons, dockApps, initialZIndex, windowConfig, skills }
