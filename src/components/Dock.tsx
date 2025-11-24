@@ -7,7 +7,7 @@ import useWindowStore from "../store/window"
 
 const Dock = () => {
   const dockRef = useRef<HTMLDivElement>(null)
-  const { windows, openWindow, closeWindow } = useWindowStore()
+  const { windows, openWindow, closeWindow, focusWindow } = useWindowStore()
 
   useGSAP(() => {
     const dock = dockRef.current
@@ -62,6 +62,7 @@ const Dock = () => {
       closeWindow(id)
     } else {
       openWindow(id)
+      focusWindow(id)
     }
 
     console.log(useWindowStore.getState().windows)

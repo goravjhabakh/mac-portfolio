@@ -6,10 +6,11 @@ const defaultLocation = locations.projects
 
 type locationsMap = typeof locations
 type explorerItem = locationsMap[keyof locationsMap]
+type ProjectFolder = NonNullable<explorerItem['children']>[number]
 
 interface ExplorerState {
-  activeLocation: explorerItem;
-  setActiveLocation: (location?: explorerItem | null) => void;
+  activeLocation: explorerItem | ProjectFolder;
+  setActiveLocation: (location?: explorerItem | ProjectFolder | null) => void;
   resetActiveLocation: () => void;
 }
 
