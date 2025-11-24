@@ -317,4 +317,35 @@ const locations = {
   trash: Trash
 }
 
-export { navLinks, navIcons, dockApps, initialZIndex, windowConfig, skills, locations }
+const socials = [
+  {
+    id: 1,
+    text: 'Github',
+    icon: '/icons/github.svg',
+    link: 'https://github.com/goravjhabakh',
+    bg: '#690ac2'
+  },
+  {
+    id: 2,
+    text: 'Linkedin',
+    icon: '/icons/linkedin.svg',
+    link: 'https://www.linkedin.com/in/gorav-jhabakh-77ba57277/',
+    bg: '#1a44c4'
+  },
+  {
+    id: 3,
+    text: 'Email',
+    icon: '/icons/email.svg',
+    link: 'mailto:goravjhabakh@gmail.com',
+    bg: '#c4311a'
+  },
+  {
+    id: 4,
+    text: 'Phone',
+    icon: '/icons/phone.svg',
+    link: '+91 9361516186',
+    bg: '#1bc449'
+  }
+]
+
+export { navLinks, navIcons, dockApps, initialZIndex, windowConfig, skills, locations, socials }
