@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# Mac Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React and Vite, designed to mimic the macOS interface. This project features a functional desktop environment with draggable windows, a dock, and various applications to showcase skills and projects.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **macOS Interface**: Realistic desktop environment with a Dock, Menu Bar, and Window management.
+- **Draggable Windows**: Interactive windows that can be dragged, focused, and minimized.
+- **Finder**: Browse through projects and skills in a file system-like interface.
+- **Terminal**: A terminal-like window displaying technical skills.
+- **PDF Viewer**: Integrated PDF viewer for displaying the resume.
+- **Image Viewer**: Custom image viewer for project screenshots.
+- **Responsive Design**: Optimized for various screen sizes.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [TailwindCSS](https://tailwindcss.com/)
+- **Animations**: [GSAP](https://gsap.com/)
+- **State Management**: [Zustand](https://zustand-demo.pmnd.rs/) with Immer
+- **PDF Rendering**: [React-PDF](https://github.com/wojtekmaj/react-pdf)
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Clone the repository**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    ```bash
+    git clone https://github.com/goravjhabakh/mac-portfolio.git
+    cd mac-portfolio
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **Install dependencies**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+4.  **Build for production**
+
+    ```bash
+    npm run build
+    ```
+
+## 📂 Project Structure
+
+```
+src/
+├── components/     # Reusable UI components (Dock, Navbar, etc.)
+├── constants/      # Configuration data (Apps, Skills, File System)
+├── store/          # Global state management (Zustand stores)
+├── windows/        # Application window components (Finder, Terminal, etc.)
+└── App.tsx         # Main application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Customization
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+You can customize the content by modifying the files in `src/constants/index.ts`. This file contains configurations for:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Dock applications
+- Desktop icons
+- File system structure (Projects, Resume, Skills)
+- Social links
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
