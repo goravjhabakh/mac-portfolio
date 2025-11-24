@@ -1,0 +1,12 @@
+<svg width="16px" height="16px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+  <g id="SVGRepo_iconCarrier">
+    <title>about</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="about-white" fill="#007AFF" transform="translate(10.666 10.666)">
+        <path d="M53.333 0C23.878 0 0 23.878 0 53.333c0 29.455 23.878 53.334 53.333 53.334 29.456 0 53.334 -23.878 53.334 -53.334S82.789 0 53.333 0m0 96c-23.526 0 -42.666 -19.14 -42.666 -42.667s19.14 -42.666 42.666 -42.666C76.86 10.667 96 29.807 96 53.333S76.86 96 53.333 96m6.678 -64c0 3.867 -2.816 6.667 -6.624 6.667 -3.963 0 -6.709 -2.8 -6.709 -6.741 0 -3.788 2.821 -6.593 6.709 -6.593 3.809 0 6.624 2.805 6.624 6.667m-12 16h10.666v32h-10.666z" id="Shape"/>
+      </g>
+    </g>
+  </g>
+</svg>

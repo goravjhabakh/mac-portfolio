@@ -5,10 +5,10 @@ const navLinks = [
 ]
 
 const navIcons = [
-  { id:1, img: '/images/wifi.svg' },
-  { id:2, img: '/images/search.svg' },
-  { id:3, img: '/images/control-centre.svg' },
-  { id:4, img: '/images/profile.svg' },
+  { id: 1, img: '/images/wifi.svg' },
+  { id: 2, img: '/images/search.svg' },
+  { id: 3, img: '/images/control-centre.svg' },
+  { id: 4, img: '/images/profile.svg' },
 ]
 
 const dockApps = [
@@ -81,4 +81,43 @@ const skills = [
   }
 ]
 
-export { navLinks, navIcons, dockApps, initialZIndex, windowConfig, skills }
+const Projects = {
+  id: 1,
+  type: "projects",
+  name: "Projects",
+  icon: '/icons/projects.svg',
+  kind: 'folder'
+}
+
+const About = {
+  id: 2,
+  type: "about",
+  name: "About",
+  icon: '/icons/about.svg',
+  kind: 'folder'
+}
+
+const Resume = {
+  id: 3,
+  type: "resume",
+  name: "Resume",
+  icon: '/icons/resume.svg',
+  kind: 'folder'
+}
+
+const Trash = {
+  id: 4,
+  type: "trash",
+  name: "Trash",
+  icon: '/icons/trash.svg',
+  kind: 'folder'
+}
+
+const locations = {
+  projects: Projects,
+  about: About,
+  resume: Resume,
+  trash: Trash
+}
+
+export { navLinks, navIcons, dockApps, initialZIndex, windowConfig, skills, locations }
